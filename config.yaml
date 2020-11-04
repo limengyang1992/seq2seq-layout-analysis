@@ -1,0 +1,39 @@
+name: "box2seq"
+datasets:
+  train_path: "datasets/train"
+  test_path: "datasets/test"
+trainer:
+  seed: 2
+  epochs: 50
+  sequnce_length: 100
+  sequnce_dim: 164
+  attention_units: 128
+  gru_units: 256
+  label_length: 19
+  batch_size: 32
+  checkpoint_dir: "./checkpoints"
+dataset:
+  dataset: ./datasets
+  loader:
+    shuffle: true
+label:
+  id2value:
+    0: "其他"
+    11: "购买方公司名称"
+    21: "购买方纳税人识别号"
+    31: "销售方公司名称"
+    41: "销售方纳税人识别号"
+    51: "购买方地址、电话"
+    61: "购买方开户银行及账号"
+    71: "销售方地址、电话"
+    81: "销售方开户银行及账号"
+    91: "发票代码（12位）"
+    101: "发票号码（8位）"
+    111: "开票日期"
+    121: "校验码"
+    131: "服务名称"
+    141: "金额"
+    151: "税额"
+    161: "税率"
+    171: "合计（小写）"
+    181: "合计（大写）"

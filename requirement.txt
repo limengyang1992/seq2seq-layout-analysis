@@ -1,0 +1,5 @@
+tensorflow==2.0
+gensim
+anyconfig
+opencv-python
+pillow
