@@ -47,7 +47,7 @@ if __name__ == "__main__":
     model.load_state_dict(torch.load('weight/s2s.pt'))
     model.eval()
 
-    data = gen(["data/test/96.json"], 1, config.max_box_num, device)
+    data = gen(["data/test/1.json"], 1, config.max_box_num, device)
     
     with torch.no_grad():
         src, trg  = next(data)
