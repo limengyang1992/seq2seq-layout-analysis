@@ -46,4 +46,4 @@ class Model(nn.Module):
         hidden, _ = self.lstm(emb)  
         attn, alpha = self.attention(hidden)
         out = self.fc(attn)
-        return out, hidden
+        return out, attn
