@@ -13,8 +13,9 @@
 
    - 准备数据
      
-     - 使用labelme即可，在groupid里标注box的对应类别
-
+     - 首先利用自己的OCR算法，将票据图片文字识别出来
+     - 将结果存入labelme
+     - 在groupid里标注所需要提取的box类别
      - 将标注数据放入data对应的train和test文件夹下
 
    - 修改config.py其中5个参数，其余可根据情况调试
